@@ -13,6 +13,14 @@ We've been on a mission to help developers build better WordPress sites since 20
 * <img src="https://cdn.roots.io/app/uploads/icon-bedrock.svg" height="14" alt="Bedrock icon"> [Bedrock](https://github.com/roots/bedrock) — WordPress boilerplate
 * <img src="https://cdn.roots.io/app/uploads/icon-trellis.svg" height="14" alt="Trellis icon"> [Trellis](https://github.com/roots/trellis) — WordPress LEMP stack
 
+## Sponsors
+
+<div align="center">
+
+<a href="https://kinsta.com/?kaid=OFDHAJIXUDIV"><img src="https://cdn.roots.io/app/uploads/kinsta.svg" alt="Kinsta" width="133" height="100"></a> <a href="https://k-m.com/"><img src="https://cdn.roots.io/app/uploads/km-digital.svg" alt="KM Digital" width="133" height="100"></a> <a href="https://carrot.com/"><img src="https://cdn.roots.io/app/uploads/carrot.svg" alt="Carrot" width="133" height="100"></a> <a href="https://www.c21redwood.com/"><img src="https://cdn.roots.io/app/uploads/c21redwood.svg" alt="C21 Redwood Realty" width="133" height="100"></a> <a href="https://wordpress.com/"><img src="https://cdn.roots.io/app/uploads/wordpress.svg" alt="WordPress.com" width="133" height="100"></a> <a href="https://pantheon.io/"><img src="https://cdn.roots.io/app/uploads/pantheon.svg" alt="Pantheon" width="133" height="100"></a>
+
+</div>
+
 <div align="center">
 
 If you have the capability, please consider donating using the links below:
