@@ -13,6 +13,7 @@ body:
   - type: checkboxes
     id: terms
     attributes:
+      label: Terms
       options:
         - label: I have read the [guidelines for Contributing to Roots Projects](https://github.com/roots/.github/blob/master/CONTRIBUTING.md)
           required: true
