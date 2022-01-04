@@ -21,7 +21,7 @@ body:
         4. I have seached the [Roots Discourse](https://discourse.roots.io/) for answers and followed them (if applicable)
         5. This is not a personal support request that should be posted on the [Roots Discourse](https://discourse.roots.io/) community
       options:
-        - Yes, all of the above are true.
+        - Yes, I have read the contributing guidelines, docs, and search Roots Discourse. This is not a duplicate issue or a personal support request.
     validations:
       required: true
 
