@@ -38,7 +38,7 @@ body:
       required: true
 
   - type: dropdown
-    id: rtfm
+    id: not-support
     attributes:
       label: This is not a personal support request that should be posted on the [Roots Discourse](https://discourse.roots.io/) community
       options:
