@@ -10,21 +10,41 @@ body:
         This form is for reporting technical issues.
         If you have a question or you're looking for support, please visit [Roots Discourse](https://discourse.roots.io/).
 
-  - type: checkboxes
-    id: terms
+  - type: dropdown
+    id: read-guidelines
     attributes:
-      label: Terms
+      label: I have read the [guidelines for Contributing to Roots Projects](https://github.com/roots/.github/blob/master/CONTRIBUTING.md)
       options:
-        - label: I have read the [guidelines for Contributing to Roots Projects](https://github.com/roots/.github/blob/master/CONTRIBUTING.md)
-          required: true
-        - label: This request is not a duplicate of an existing issue
-          required: true
-        - label: I have read the [docs](https://roots.io/docs/) and followed them (if applicable)
-          required: true
-        - label: I have seached the [Roots Discourse](https://discourse.roots.io/) for answers and followed them (if applicable)
-          required: true
-        - label: This is not a personal support request that should be posted on the [Roots Discourse](https://discourse.roots.io/) community
-          required: true
+        - Yes
+    validations:
+      required: true
+
+  - type: dropdown
+    id: not-a-duplicate
+    attributes:
+      label: I have read the [guidelines for Contributing to Roots Projects](https://github.com/roots/.github/blob/master/CONTRIBUTING.md)
+      options:
+        - Yes
+    validations:
+      required: true
+
+  - type: dropdown
+    id: rtfm
+    attributes:
+      label: I have read the [docs](https://roots.io/docs/) and followed them (if applicable)
+      options:
+        - Yes
+    validations:
+      required: true
+
+  - type: dropdown
+    id: rtfm
+    attributes:
+      label: This is not a personal support request that should be posted on the [Roots Discourse](https://discourse.roots.io/) community
+      options:
+        - Yes
+    validations:
+      required: true
 
   - type: textarea
     id: description
