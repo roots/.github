@@ -19,7 +19,7 @@ body:
         2. This request is not a duplicate of an existing issue
         3. This is not a personal support request that should be posted on the [Roots Discourse](https://discourse.roots.io/) community
       options:
-        - Yes, all of the above are true.
+        - Yes, I have read and followed the Roots contributing guidelines. This is not a duplicate issue or a personal support request.
     validations:
       required: true
 
