@@ -1,30 +1,51 @@
 <p align="center">
   <a href="https://roots.io/">
-    <img alt="Roots" src="https://cdn.roots.io/app/uploads/logo-roots.svg" height="100">
+    <img alt="Roots" src="https://cdn.roots.io/app/uploads/logo-roots.svg" height="55">
   </a>
 </p>
-<p align="center">
-  <a href="https://twitter.com/rootswp"><img alt="Follow Roots" src="https://img.shields.io/twitter/follow/rootswp.svg?style=flat-square&color=1da1f2"></a>
-</p>
-
-We've been on a mission to help developers build better WordPress sites since 2011. Our primary open source projects include:
-
-* <img src="https://cdn.roots.io/app/uploads/icon-sage.svg" height="14" alt="Sage icon"> [Sage](https://github.com/roots/sage) — WordPress starter theme
-* <img src="https://cdn.roots.io/app/uploads/icon-bedrock.svg" height="14" alt="Bedrock icon"> [Bedrock](https://github.com/roots/bedrock) — WordPress boilerplate
-* <img src="https://cdn.roots.io/app/uploads/icon-trellis.svg" height="14" alt="Trellis icon"> [Trellis](https://github.com/roots/trellis) — WordPress LEMP stack
-
-## Sponsors
+<p align="center">Making WordPress development better since 2011</p>
 
 <div align="center">
+<table>
+  <tr>
+    <td><a href="https://roots.io/sage/"><img src="https://cdn.roots.io/app/uploads/logo-sage.svg" height="35" alt="Sage"></a></td>
+    <td>WordPress starter theme</td>
+  </tr>
+  <tr>
+    <td><a href="https://roots.io/bedrock/"><img src="https://cdn.roots.io/app/uploads/logo-bedrock.svg" height="35" alt="Bedrock"></a></td>
+    <td>WordPress boilerplate</td>
+  </tr>
+  <tr>
+    <td><a href="https://roots.io/trellis/"><img src="https://cdn.roots.io/app/uploads/logo-trellis.svg" height="35" alt="Trellis"></a></td>
+    <td>WordPress LEMP stack</td>
+  </tr>
+  <tr>
+    <td><a href="https://roots.io/acorn/"><img src="https://cdn.roots.io/app/uploads/logo-acorn.svg" height="35" alt="Acorn"></a></td>
+    <td>WordPress + Laravel</td>
+  </tr>
+  <tr>
+    <td><a href="https://bud.js.org/"><img src="https://cdn.roots.io/app/uploads/logo-bud.svg" height="35" alt="Bud"></a></td>
+    <td>⚡️ Lightning fast frontend build tools</td>
+  </tr>
+</table>
+</div>
 
-<a href="https://k-m.com/"><img src="https://cdn.roots.io/app/uploads/km-digital.svg" alt="KM Digital" width="133" height="100"></a> <a href="https://carrot.com/"><img src="https://cdn.roots.io/app/uploads/carrot.svg" alt="Carrot" width="133" height="100"></a> <a href="https://www.c21redwood.com/"><img src="https://cdn.roots.io/app/uploads/c21redwood.svg" alt="C21 Redwood Realty" width="133" height="100"></a> <a href="https://wordpress.com/"><img src="https://cdn.roots.io/app/uploads/wordpress.svg" alt="WordPress.com" width="133" height="100"></a> <a href="https://pantheon.io/"><img src="https://cdn.roots.io/app/uploads/pantheon.svg" alt="Pantheon" width="133" height="100"></a>
+<p align="center">
+  <a href="https://twitter.com/rootswp"><img alt="Follow Roots" src="https://img.shields.io/twitter/follow/rootswp.svg?style=social&color=1da1f2"></a>
+</p>
+
+<div align="center">
+  
+### Sponsors
+
+<a href="https://k-m.com/"><img src="https://cdn.roots.io/app/uploads/km-digital.svg" alt="KM Digital" height="85"></a> <a href="https://carrot.com/"><img src="https://cdn.roots.io/app/uploads/carrot.svg" alt="Carrot" height="85"></a> <a href="https://www.c21redwood.com/"><img src="https://cdn.roots.io/app/uploads/c21redwood.svg" alt="C21 Redwood Realty" height="85"></a> <a href="https://wordpress.com/"><img src="https://cdn.roots.io/app/uploads/wordpress.svg" alt="WordPress.com" height="85"></a> <a href="https://pantheon.io/"><img src="https://cdn.roots.io/app/uploads/pantheon.svg" alt="Pantheon" height="85"></a>
 
 </div>
 
 <div align="center">
-
-If you have the capability, please consider donating using the links below:
-
-[![Sponsor on GitHub](https://img.shields.io/static/v1?label=sponsor&message=%E2%9D%A4&logo=GitHub&style=flat-square)](https://github.com/sponsors/roots) [![Sponsor on Patreon](https://img.shields.io/badge/sponsor-patreon-orange.svg?style=flat-square&logo=patreon")](https://www.patreon.com/rootsdev) [![Donate via PayPal](https://img.shields.io/badge/donate-paypal-blue.svg?style=flat-square&logo=paypal)](https://www.paypal.me/rootsdev)
+  
+<h4>💜 If you have the capability, please consider helping Roots grow 🌱</h4>
+  
+Join 200+ other members from the community on Roots Slack by [becoming a GitHub Sponsor](https://github.com/sponsors/roots)
 
 </div>
