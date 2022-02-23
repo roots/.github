@@ -5,6 +5,10 @@
 </p>
 <p align="center">Making WordPress development better since 2011</p>
 
+
+<p align="center"><a href="https://github.com/sponsors/roots"><img src="https://img.shields.io/badge/sponsor%20roots-525ddc?logo=github&logoColor=ffffff&message=test" alt="Sponsor Roots"></a></p>
+
+
 <div align="center">
 <table>
   <tr>
@@ -30,10 +34,6 @@
 </table>
 </div>
 
-<p align="center">
-  <a href="https://twitter.com/rootswp"><img alt="Follow Roots" src="https://img.shields.io/twitter/follow/rootswp.svg?style=social&color=1da1f2"></a>
-</p>
-
 <div align="center">
   
 ### Sponsors
@@ -44,8 +44,10 @@
 
 <div align="center">
   
-<h4>💜 If you have the capability, please consider helping Roots grow 🌱</h4>
+<b>💜 If you have the capability, please consider helping Roots grow 🌱</b>
   
 Join 200+ other members from the community on Roots Slack by [becoming a GitHub Sponsor](https://github.com/sponsors/roots)
+  
+<a href="https://github.com/sponsors/roots"><img src="https://img.shields.io/badge/sponsor%20roots-525ddc?logo=github&logoColor=ffffff&message=test" alt="Sponsor Roots"></a>
 
 </div>
