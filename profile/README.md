@@ -5,7 +5,7 @@
 </p>
 <p align="center">Making WordPress development better since 2011</p>
 
-<p align="center"><a href="https://github.com/sponsors/roots"><img src="https://img.shields.io/badge/sponsor%20roots-525ddc?logo=github&logoColor=ffffff&message=test" alt="Sponsor Roots"></a></p>
+<p align="center"><a href="https://github.com/sponsors/roots"><img height="34" src="https://img.shields.io/badge/sponsor%20roots-525ddc?logo=github&logoColor=ffffff&message=test" alt="Sponsor Roots"></a></p>
 
 <div align="center">
 <table>
@@ -59,5 +59,5 @@ Join 200+ other members from the community on Roots Slack by [becoming a GitHub 
 </div>
 
 <div align="center">
-<a href="https://github.com/sponsors/roots"><img src="https://img.shields.io/badge/sponsor%20roots-525ddc?logo=github&logoColor=ffffff&message=test" alt="Sponsor Roots"></a>
+<a href="https://github.com/sponsors/roots"><img height="34" src="https://img.shields.io/badge/sponsor%20roots-525ddc?logo=github&logoColor=ffffff&message=test" alt="Sponsor Roots"></a>
 </div>
