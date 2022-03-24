@@ -17,6 +17,7 @@ jobs:
       - uses: actions/setup-node@v2
         with:
           cache: 'npm'
+      - run: npm install
       - run: npm run update-sponsors
         env:
           GH_TOKEN: ${{ secrets.ROOTS_BOT_ACCESS_TOKEN }}
