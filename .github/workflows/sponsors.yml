@@ -13,6 +13,7 @@ jobs:
         with:
           repository: 'roots/update-sponsors'
           ref: 'main'
+          token: ${{ secrets.ROOTS_BOT_ACCESS_TOKEN }}
       - uses: actions/setup-node@v2
         with:
           cache: 'npm'
