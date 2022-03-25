@@ -20,4 +20,4 @@ jobs:
       - run: npm install
       - run: npm run update-sponsors
         env:
-          GH_TOKEN: ${{ secrets.ROOTS_BOT_ACCESS_TOKEN }}
+          GH_TOKEN: ${{ secrets.UPDATE_SPONSORS_TOKEN }}
