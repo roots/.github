@@ -13,7 +13,7 @@ jobs:
       - uses: actions/setup-node@v2
         with:
           cache: 'npm'
-        working-directory: update-sponsors
+          cache-dependency-path: update-sponsors/package-lock.json
       - run: npm install
         working-directory: update-sponsors
       - run: npm run update-sponsors
