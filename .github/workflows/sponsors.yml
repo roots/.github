@@ -21,3 +21,9 @@ jobs:
       - run: npm run update-sponsors
         env:
           GH_TOKEN: ${{ secrets.UPDATE_SPONSORS_TOKEN }}
+      - run: |
+          git config user.name "Roots Ladybug"
+          git config user.email "ben+ladybug@roots.io"
+          git add profile/README.md
+          git commit -m "Update profile sponsors"
+          git push
