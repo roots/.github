@@ -49,6 +49,8 @@ async function main() {
     },
   )
   const totalCount = data.data.organization.sponsorshipsAsMaintainer.totalCount
+  console.log("Total sponsors: ${totalCount}");
+
   const sponsors = data.data.organization.sponsorshipsAsMaintainer.nodes
     .map((node) => {
       return {
@@ -77,13 +79,11 @@ async function main() {
     profilePath,
     replaceSection({
       input: readme,
-      startWith: '<!-- replace-sponsors -->',
-      endWith: '<!-- replace-sponsors -->',
-      replaceWith: `<!-- replace-sponsors -->
+      startWith: '<!-- replace-sponsors-start -->',
+      endWith: '<!-- replace-sponsors-end -->',
+      replaceWith: `<!-- replace-sponsors-start -->
 ${code}
-
-...and ${totalCount - sponsors.length} more
-      <!-- replace-sponsors -->`,
+<!-- replace-sponsors-end -->`,
     }),
     'utf-8',
   )
