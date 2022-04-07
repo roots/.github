@@ -10,20 +10,19 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
-        with:
-          repository: 'roots/update-sponsors'
-          ref: 'main'
-          token: ${{ secrets.ROOTS_BOT_ACCESS_TOKEN }}
       - uses: actions/setup-node@v2
         with:
           cache: 'npm'
+        working-directory: update-sponsors
       - run: npm install
+        working-directory: update-sponsors
       - run: npm run update-sponsors
         env:
           GH_TOKEN: ${{ secrets.UPDATE_SPONSORS_TOKEN }}
+        working-directory: update-sponsors
       - run: |
-          git config user.name "Roots Ladybug"
-          git config user.email "ben+ladybug@roots.io"
+          git config user.email "actions@github.com"
+          git config user.name "GitHub Actions"
           git add profile/README.md
-          git commit -m "Update profile sponsors"
+          git commit -m "Update sponsors"
           git push
