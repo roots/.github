@@ -49,7 +49,7 @@ async function main() {
     },
   )
   const totalCount = data.data.organization.sponsorshipsAsMaintainer.totalCount
-  console.log("Total sponsors: ${totalCount}");
+  console.log(`Total sponsors: ${totalCount}`);
 
   const sponsors = data.data.organization.sponsorshipsAsMaintainer.nodes
     .map((node) => {

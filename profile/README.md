@@ -51,8 +51,8 @@ Join 200+ other members from the community on Roots Slack by [becoming a GitHub 
 
 <div align="center">
 
-<!-- replace-sponsors -->
-<!-- replace-sponsors -->
+<!-- replace-sponsors-start -->
+<!-- replace-sponsors-end -->
 
 </div>
 
