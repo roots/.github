@@ -24,5 +24,5 @@ jobs:
           git config user.email "actions@github.com"
           git config user.name "GitHub Actions"
           git add profile/README.md
-          git commit -m "Update sponsors"
+          git status -s | grep "profile/README.md" && git commit -m "Update sponsors"
           git push
