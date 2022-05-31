@@ -45,7 +45,7 @@
   
 <b>💜 If you have the capability, please consider helping Roots grow 🌱</b>
   
-Join 200+ other members from the community on Roots Slack by [becoming a GitHub Sponsor](https://github.com/sponsors/roots)
+Join other members from the community on our Discord server by [becoming a GitHub Sponsor](https://github.com/sponsors/roots)
   
 </div>
 
