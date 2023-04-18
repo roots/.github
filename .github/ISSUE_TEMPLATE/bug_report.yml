@@ -21,7 +21,7 @@ body:
           required: true
         - label: I have read the [docs](https://roots.io/docs/) and followed them (if applicable)
           required: true
-        - label: I have seached the [Roots Discourse](https://discourse.roots.io/) for answers and followed them (if applicable)
+        - label: I have searched the [Roots Discourse](https://discourse.roots.io/) for answers and followed them (if applicable)
           required: true
         - label: This is not a personal support request that should be posted on the [Roots Discourse](https://discourse.roots.io/) community
           required: true
