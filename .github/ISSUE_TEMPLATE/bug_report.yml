@@ -1,94 +1,74 @@
-name: Bug Report
-description: Report a bug. Please provide enough information so that we can reproduce the problem.
-title: "Bug: "
+name: 🐛 Bug Report
+description: Create a bug report
 labels: [bug]
 
 body:
   - type: markdown
     attributes:
       value: |
-        This form is for reporting technical issues.
-        If you have a question or you're looking for support, please visit [Roots Discourse](https://discourse.roots.io/).
+        **This form is for submitting bug reports.**
 
-  - type: checkboxes
-    id: terms
+        If you have a question or you're looking for support:
+
+        * Visit [Roots Discourse](https://discourse.roots.io/) to ask questions
+        * Join our [Discord server](https://github.com/sponsors/roots) by sponsoring us
+        * [Read the docs](https://roots.io/docs/)
+
+  - type: input
+    id: version
     attributes:
-      label: Terms
-      options:
-        - label: I have read the [guidelines for Contributing to Roots Projects](https://github.com/roots/.github/blob/master/CONTRIBUTING.md)
-          required: true
-        - label: This request is not a duplicate of an existing issue
-          required: true
-        - label: I have read the [docs](https://roots.io/docs/) and followed them (if applicable)
-          required: true
-        - label: I have searched the [Roots Discourse](https://discourse.roots.io/) for answers and followed them (if applicable)
-          required: true
-        - label: This is not a personal support request that should be posted on the [Roots Discourse](https://discourse.roots.io/) community
-          required: true
-
-  - type: textarea
-    id: description
-    attributes:
-      label: Description
-      value: |
-        #### What's wrong?
-
-        #### What have you tried?
-
-        #### What insights have you gained?
-
-        #### Possible solutions
-
-        #### Temporary workarounds
-    validations:
-      required: true
-
-  - type: textarea
-    id: steps-to-reproduce
-    attributes:
-      label: Steps To Reproduce
-      description: |
-        Non-reproducible issues may be immediately closed as not actionable.
-        Please provide reproduction steps as detailed as possible.
-      value: |
-        1.
-        1.
-        1.
+      label: Version
     validations:
       required: true
 
   - type: textarea
     id: expected-behavior
     attributes:
-      label: Expected Behavior
-      placeholder: What did you expect to happen?
+      label: What did you expect to happen?
     validations:
       required: true
 
   - type: textarea
     id: actual-behavior
     attributes:
-      label: Actual Behavior
-      placeholder: What actually happens?
+      label: What actually happens?
     validations:
       required: true
 
   - type: textarea
-    id: logs
+    id: steps-to-reproduce
     attributes:
-      label: Relevant Log Output
-      description: Please copy and paste any relevant log output.
-      render: shell
+      label: Steps to reproduce
+      description: Please provide comprehensive reproduction steps.
+    validations:
+      required: true
 
-  - type: input
+  - type: textarea
     id: versions
     attributes:
-      label: Versions
-      description: You can get this information from referencing `CHANGELOG.md`. If you know, please provide the Git commit SHA. Also, please include the OS and what version of the OS you’re running.
+      label: System info
+      description: Please include your OS and what version of the OS you’re running.
+
+  - type: textarea
+    id: logs
+    attributes:
+      label: Log output
+      description: Please copy and paste any relevant output. Do not include screenshots of code or errors.
+      render: shell
+
+  - type: dropdown
+    id: support
+    attributes:
+      label: Please confirm this isn't a support request.
+      description: Non-reproducible issues may be closed and you will be asked to create a topic on [Roots Discourse](https://discourse.roots.io/).
+      multiple: true
+      options:
+        - 'Yes'
+        - 'No'
     validations:
       required: true
 
   - type: markdown
     attributes:
       value: |
-        Thanks for taking the time to fill out this bug report!
+        Thank you for taking the time to fill out this bug report!

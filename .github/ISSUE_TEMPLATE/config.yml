@@ -1,5 +1,8 @@
 blank_issues_enabled: false
 contact_links:
-  - name: Roots Discourse
+  - name: 💬 Community Forum
     url: https://discourse.roots.io
-    about: Is this a personal support request? Find help on our support forum.
+    about: Ask questions and discuss with other Roots users
+  - name: 💬 Discord Chat
+    url: https://github.com/sponsors/roots
+    about: Sponsor us on GitHub and join our Discord server
