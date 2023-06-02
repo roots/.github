@@ -53,7 +53,7 @@ body:
     id: logs
     attributes:
       label: Log output
-      description: Please copy and paste any relevant output.
+      description: Please copy and paste any relevant output. Do not include screenshots of code or errors.
       render: shell
 
   - type: dropdown
