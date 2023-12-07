@@ -15,39 +15,56 @@ async function main() {
           required: true,
         },
       ])
-  const { data } = await axios.post(
-    `https://api.github.com/graphql
-    `,
-    {
-      query: `query { 
-        organization(login: "roots") { 
-          sponsorshipsAsMaintainer(first: 100) {
-            totalCount
-            nodes {
-              tier {
-                monthlyPriceInDollars
-              }
-              sponsorEntity {
-                ... on User {
-                  login
-                  avatarUrl
+  try {
+    const { data } = await axios.post(
+      `https://api.github.com/graphql
+      `,
+      {
+        query: `query { 
+          organization(login: "roots") { 
+            sponsorshipsAsMaintainer(first: 100) {
+              totalCount
+              nodes {
+                tier {
+                  monthlyPriceInDollars
                 }
-                ... on Organization {
-                  login
-                  avatarUrl
+                sponsorEntity {
+                  ... on User {
+                    login
+                    avatarUrl
+                  }
+                  ... on Organization {
+                    login
+                    avatarUrl
+                  }
                 }
               }
             }
           }
-        }
-      }`,
-    },
-    {
-      headers: {
-        Authorization: `bearer ${token}`,
+        }`,
       },
-    },
-  )
+      {
+        headers: {
+          Authorization: `bearer ${token}`,
+        },
+      },
+    )
+  } catch (error) {
+    if (error.response) {
+      // The request was made and the server responded with a status code
+      // that falls out of the range of 2xx
+      console.log(error.response.data);
+      console.log(error.response.status);
+      console.log(error.response.headers);
+    } else if (error.request) {
+      // The request was made but no response was received
+      console.log(error.request);
+    } else {
+      // Something happened in setting up the request that triggered an Error
+      console.log('Error', error.message);
+    }
+  }
+
   const totalCount = data.data.organization.sponsorshipsAsMaintainer.totalCount
   console.log(`Total sponsors: ${totalCount}`);
 
