@@ -65,6 +65,7 @@ async function main() {
     }
   }
 
+  console.log(data);
   const totalCount = data.data.organization.sponsorshipsAsMaintainer.totalCount
   console.log(`Total sponsors: ${totalCount}`);
 
