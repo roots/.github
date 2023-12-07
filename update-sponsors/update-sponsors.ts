@@ -15,8 +15,11 @@ async function main() {
           required: true,
         },
       ])
+
+  let data = null;
+
   try {
-    const { data } = await axios.post(
+    const response = await axios.post(
       `https://api.github.com/graphql
       `,
       {
@@ -49,6 +52,8 @@ async function main() {
         },
       },
     )
+
+    data = response.data;
   } catch (error) {
     if (error.response) {
       // The request was made and the server responded with a status code
@@ -65,9 +70,14 @@ async function main() {
     }
   }
 
-  console.log(data);
-  const totalCount = data.data.organization.sponsorshipsAsMaintainer.totalCount
-  console.log(`Total sponsors: ${totalCount}`);
+  if (data) {
+    console.log(data);
+    const totalCount = data.data.organization.sponsorshipsAsMaintainer.totalCount
+    console.log(`Total sponsors: ${totalCount}`);
+  } else {
+    console.log('No data');
+    return;
+  }
 
   const sponsors = data.data.organization.sponsorshipsAsMaintainer.nodes
     .map((node) => {
