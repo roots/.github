@@ -12,15 +12,11 @@
 <table>
   <tr>
     <td><a href="https://roots.io/acorn/"><img src="https://cdn.roots.io/app/uploads/logo-acorn.svg" height="35" alt="Acorn"></a></td>
-    <td>WordPress 🤝 Laravel</td>
+    <td>Integrate WordPress &amp; Laravel</td>
   </tr>
   <tr>
     <td><a href="https://roots.io/bedrock/"><img src="https://cdn.roots.io/app/uploads/logo-bedrock.svg" height="35" alt="Bedrock"></a></td>
     <td>WordPress boilerplate</td>
-  </tr>
-  <tr>
-    <td><a href="https://bud.js.org/"><img src="https://cdn.roots.io/app/uploads/logo-bud.svg" height="35" alt="Bud"></a></td>
-    <td>High-speed build system</td>
   </tr>
   <tr>
     <td><a href="https://roots.io/sage/"><img src="https://cdn.roots.io/app/uploads/logo-sage.svg" height="35" alt="Sage"></a></td>
