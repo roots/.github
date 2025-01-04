@@ -12,7 +12,7 @@
 <table>
   <tr>
     <td><a href="https://roots.io/acorn/"><img src="https://cdn.roots.io/app/uploads/logo-acorn.svg" height="35" alt="Acorn"></a></td>
-    <td>Integrate WordPress &amp; Laravel</td>
+    <td>WordPress &amp; Laravel integration</td>
   </tr>
   <tr>
     <td><a href="https://roots.io/bedrock/"><img src="https://cdn.roots.io/app/uploads/logo-bedrock.svg" height="35" alt="Bedrock"></a></td>
