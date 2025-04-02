@@ -16,70 +16,88 @@ async function main() {
         },
       ])
 
-  let data = null;
+  let allSponsors = [];
+  let totalCount = 0;
+  let hasNextPage = true;
+  let endCursor = null;
 
-  try {
-    const response = await axios.post(
-      `https://api.github.com/graphql
-      `,
-      {
-        query: `query { 
-          organization(login: "roots") { 
-            sponsorshipsAsMaintainer(first: 100) {
-              totalCount
-              nodes {
-                tier {
-                  monthlyPriceInDollars
+  while (hasNextPage) {
+    try {
+      const cursorParam = endCursor ? `, after: "${endCursor}"` : '';
+
+      const response = await axios.post(
+        `https://api.github.com/graphql`,
+        {
+          query: `query {
+            organization(login: "roots") {
+              sponsorshipsAsMaintainer(first: 100${cursorParam}) {
+                totalCount
+                pageInfo {
+                  hasNextPage
+                  endCursor
                 }
-                sponsorEntity {
-                  ... on User {
-                    login
-                    avatarUrl
+                nodes {
+                  tier {
+                    monthlyPriceInDollars
                   }
-                  ... on Organization {
-                    login
-                    avatarUrl
+                  sponsorEntity {
+                    ... on User {
+                      login
+                      avatarUrl
+                    }
+                    ... on Organization {
+                      login
+                      avatarUrl
+                    }
                   }
                 }
               }
             }
-          }
-        }`,
-      },
-      {
-        headers: {
-          Authorization: `bearer ${token}`,
+          }`,
         },
-      },
-    )
+        {
+          headers: {
+            Authorization: `bearer ${token}`,
+          },
+        },
+      )
 
-    data = response.data;
-  } catch (error) {
-    if (error.response) {
-      // The request was made and the server responded with a status code
-      // that falls out of the range of 2xx
-      console.log(error.response.data);
-      console.log(error.response.status);
-      console.log(error.response.headers);
-    } else if (error.request) {
-      // The request was made but no response was received
-      console.log(error.request);
-    } else {
-      // Something happened in setting up the request that triggered an Error
-      console.log('Error', error.message);
+      const data = response.data;
+
+      if (totalCount === 0) {
+        totalCount = data.data.organization.sponsorshipsAsMaintainer.totalCount;
+        console.log(`Total sponsors: ${totalCount}`);
+      }
+
+      const pageInfo = data.data.organization.sponsorshipsAsMaintainer.pageInfo;
+      hasNextPage = pageInfo.hasNextPage;
+      endCursor = pageInfo.endCursor;
+
+      const currentSponsors = data.data.organization.sponsorshipsAsMaintainer.nodes;
+      allSponsors = [...allSponsors, ...currentSponsors];
+
+      console.log(`Retrieved ${allSponsors.length} of ${totalCount} sponsors`);
+
+    } catch (error) {
+      if (error.response) {
+        console.log(error.response.data);
+        console.log(error.response.status);
+        console.log(error.response.headers);
+      } else if (error.request) {
+        console.log(error.request);
+      } else {
+        console.log('Error', error.message);
+      }
+      break;
     }
   }
 
-  if (data) {
-    console.log(data);
-    const totalCount = data.data.organization.sponsorshipsAsMaintainer.totalCount
-    console.log(`Total sponsors: ${totalCount}`);
-  } else {
+  if (allSponsors.length === 0) {
     console.log('No data');
     return;
   }
 
-  const sponsors = data.data.organization.sponsorshipsAsMaintainer.nodes
+  const sponsors = allSponsors
     .map((node) => {
       return {
         monthlyPriceInDollars: node.tier.monthlyPriceInDollars,
@@ -115,6 +133,8 @@ ${code}
     }),
     'utf-8',
   )
+
+  console.log(`Updated README with ${sponsors.length} sponsors`);
 }
 
 main()
