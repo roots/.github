@@ -65,6 +65,16 @@ async function main() {
 
       const data = response.data;
 
+      if (data.errors) {
+        console.error('GraphQL Errors:', data.errors);
+        throw new Error('GraphQL query failed');
+      }
+
+      if (!data.data || !data.data.organization) {
+        console.error('Invalid response structure:', data);
+        throw new Error('Invalid API response');
+      }
+
       if (totalCount === 0) {
         totalCount = data.data.organization.sponsorshipsAsMaintainer.totalCount;
         console.log(`Total sponsors: ${totalCount}`);
@@ -119,7 +129,8 @@ async function main() {
       }
     })
     .filter((node) => {
-      return node.monthlyPriceInDollars >= 7 && !node.private
+      // Only filter out private sponsors since we can't access tier amounts
+      return !node.private && node.username !== 'retlehs'
     })
     .sort((a, b) => {
       // Sort by sponsorship duration (longest first)
