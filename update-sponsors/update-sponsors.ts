@@ -37,6 +37,7 @@ async function main() {
                   endCursor
                 }
                 nodes {
+                  createdAt
                   tier {
                     monthlyPriceInDollars
                   }
@@ -99,18 +100,30 @@ async function main() {
 
   const sponsors = allSponsors
     .map((node) => {
+      // Calculate days as sponsor
+      let daysAsSupporter = 0;
+      if (node.createdAt) {
+        const startDate = new Date(node.createdAt);
+        const now = new Date();
+        const diffTime = Math.abs(now.getTime() - startDate.getTime());
+        daysAsSupporter = Math.ceil(diffTime / (1000 * 60 * 60 * 24));
+      }
+
       return {
-        monthlyPriceInDollars: node.tier.monthlyPriceInDollars,
+        monthlyPriceInDollars: node.tier?.monthlyPriceInDollars || 0,
         username: node.sponsorEntity.login,
         avatar: node.sponsorEntity.avatarUrl,
         private: node.privacyLevel === 'PRIVATE',
+        daysAsSupporter: daysAsSupporter,
+        createdAt: node.createdAt
       }
     })
     .filter((node) => {
       return node.monthlyPriceInDollars >= 7 && !node.private
     })
     .sort((a, b) => {
-      return a.monthlyPriceInDollars > b.monthlyPriceInDollars ? -1 : 1
+      // Sort by sponsorship duration (longest first)
+      return b.daysAsSupporter - a.daysAsSupporter
     })
 
   const code = sponsors
