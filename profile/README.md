@@ -23,8 +23,16 @@
     <td>WordPress starter theme</td>
   </tr>
   <tr>
+    <td><a href="https://roots.io/radicle/"><img src="https://cdn.roots.io/app/uploads/logo-radicle.svg" height="35" alt="Radicle"></a></td>
+    <td>Laravel-powered WordPress starter with complete Roots stack</td>
+  </tr>
+  <tr>
     <td><a href="https://roots.io/trellis/"><img src="https://cdn.roots.io/app/uploads/logo-trellis.svg" height="35" alt="Trellis"></a></td>
     <td>WordPress LEMP stack</td>
+  </tr>
+  <tr>
+    <td><a href="https://wp-packages.org/">WP Packages</a></td>
+    <td>Composer repository for WordPress plugins and themes</td>
   </tr>
 </table>
 </div>
